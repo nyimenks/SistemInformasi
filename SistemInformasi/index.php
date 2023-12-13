@@ -195,7 +195,7 @@ if (isset($_POST['simpan'])) {
                         $sql2 = "select * from mahasiswa order by id desc";
                         $q2 = mysqli_query($koneksi, $sql2);
                         $urut = 1;
-                        while ($r2 = $q2->fetch_assoc()) {
+                        while ($r2 = mysqli_fetch_array($q2)) {
                             $id = $r2['id'];
                             $nim = $r2['nim'];
                             $nama = $r2['nama'];
